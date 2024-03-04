@@ -16,6 +16,16 @@ def load_country_names():
         country_names = file.read().splitlines()
     return country_names
 
+@st.cache_data
+def load_country_name_mappings():
+    with open('Country_name_list.txt', 'r') as file:
+        english_names = file.read().splitlines()
+    with open('Chinese_name.txt', 'r') as file:
+        chinese_names = file.read().splitlines()
+
+    # 假设两个文件中的国家名称是一一对应的
+    return dict(zip(english_names, chinese_names))
+
 def initialize_state():
     if 'score' not in st.session_state:
         st.session_state['score'] = 0
@@ -23,30 +33,36 @@ def initialize_state():
         st.session_state['question_count'] = 0
 
     if st.session_state['question_count'] < MAX_QUESTIONS:
+        # 加载国家名称映射
+        name_mappings = load_country_name_mappings()
+        
         country_names = load_country_names()
         correct_country_name = random.choice(country_names)
+        correct_country_chinese_name = name_mappings[correct_country_name]  # 获取中文名称
         incorrect_countries = random.sample([name for name in country_names if name != correct_country_name], 3)
-        answers = [correct_country_name] + incorrect_countries
+        incorrect_countries_chinese = [name_mappings[name] for name in incorrect_countries]  # 转换为中文名称
+        answers = [correct_country_chinese_name] + incorrect_countries_chinese
         random.shuffle(answers)
         
         st.session_state['correct_country_name'] = correct_country_name
+        st.session_state['correct_country_chinese_name'] = correct_country_chinese_name  # 存储中文正确答案
         st.session_state['answers'] = answers
         st.session_state['answered'] = False
 
 def check_answer(answer):
     st.session_state['selected_answer'] = answer
-    if answer == st.session_state['correct_country_name']:
-        st.session_state['answer_feedback'] = f"Correct! It is indeed {st.session_state['correct_country_name']}."
+    if answer == st.session_state['correct_country_chinese_name']:
+        st.session_state['answer_feedback'] = f"正确！这确实是 {st.session_state['correct_country_chinese_name']}。"
         st.session_state['score'] += 1
     else:
-        st.session_state['answer_feedback'] = f"Wrong. This is the map of {st.session_state['correct_country_name']}."
+        st.session_state['answer_feedback'] = f"错误。这是 {st.session_state['correct_country_chinese_name']} 的地图。"
     st.session_state['answered'] = True
     st.session_state['question_count'] += 1
 
     # 如果没有更多的问题，显示结束游戏信息和分数
     if st.session_state['question_count'] >= MAX_QUESTIONS:
         st.balloons()
-        st.write(f"Game over! Your final score is: {st.session_state['score']} / {MAX_QUESTIONS}")
+        st.write(f"游戏结束！你的最终得分是：{st.session_state['score']} / {MAX_QUESTIONS}")
     st.experimental_rerun()
 
 
