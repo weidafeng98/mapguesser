@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="134.664254pt" height="280.512pt" viewBox="0 0 134.664254 280.512" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2024-03-04T13:11:11.667697</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 280.512 
+L 134.664254 280.512 
+L 134.664254 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="PatchCollection_1">
+    <defs>
+     <path id="mcd0b0e23e4" d="M 48.059786 -261.216 
+L 55.170755 -250.699031 
+L 68.342208 -238.488652 
+L 63.089787 -222.475527 
+L 66.564466 -212.374482 
+L 73.99866 -202.362565 
+L 80.705596 -186.408858 
+L 79.897531 -178.209186 
+L 72.140111 -160.918577 
+L 72.220918 -150.936368 
+L 95.493178 -137.151415 
+L 114.078664 -111.126371 
+L 121.997697 -81.803635 
+L 116.583664 -51.91643 
+L 95.008339 -24.435648 
+L 78.927854 -19.296 
+L 31.171236 -27.287707 
+L 13.555428 -32.516483 
+L 12.666557 -43.241416 
+L 21.797687 -55.570631 
+L 33.757042 -67.929556 
+L 41.191237 -83.259375 
+L 40.787205 -107.798969 
+L 34.241882 -126.218519 
+L 25.757203 -142.796115 
+L 19.777525 -161.809845 
+L 21.636074 -200.520609 
+L 35.130753 -239.290794 
+L 48.059786 -261.216 
+" style="stroke: #000000"/>
+    </defs>
+    <g clip-path="url(#p05a313fac2)">
+     <use xlink:href="#mcd0b0e23e4" x="0" y="280.512" style="fill: #f5f5f5; stroke: #000000"/>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p05a313fac2">
+   <rect x="7.2" y="7.2" width="120.264254" height="266.112"/>
+  </clipPath>
+ </defs>
+</svg>

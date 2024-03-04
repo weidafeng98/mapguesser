@@ -1,0 +1,67 @@
+altair==5.2.0
+attrs @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/attrs_1699282013651/work
+blinker==1.7.0
+Bottleneck @ file:///private/var/folders/c_/qfmhj66j0tn016nkx_th4hxm0000gp/T/abs_19gnn4b1vz/croot/bottleneck_1709069916591/work
+cachetools==5.3.3
+certifi @ file:///home/conda/feedstock_root/build_artifacts/certifi_1707022139797/work/certifi
+charset-normalizer==3.3.2
+click @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/click_1699239792454/work
+click-plugins @ file:///Users/ktietz/demo/mc3/conda-bld/click-plugins_1630665883852/work
+cligj==0.7.2
+contourpy @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/contourpy_1707340536404/work
+cycler @ file:///tmp/build/80754af9/cycler_1637851556182/work
+descartes==1.1.0
+fiona @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_06jpheadmz/croot/fiona_1704920727678/work
+fonttools==4.25.0
+GDAL @ file:///private/var/folders/c_/qfmhj66j0tn016nkx_th4hxm0000gp/T/abs_1em3xrx8kv/croot/gdal-split_1704913255342/work/build/swig/python
+geopandas==0.14.3
+gitdb==4.0.11
+GitPython==3.1.42
+idna==3.6
+importlib-metadata==7.0.1
+Jinja2==3.1.3
+jsonschema==4.21.1
+jsonschema-specifications==2023.12.1
+kiwisolver @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/kiwisolver_1699242237265/work
+markdown-it-py==3.0.0
+MarkupSafe==2.1.5
+matplotlib @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/matplotlib-suite_1699246336365/work
+mdurl==0.1.2
+mkl-fft @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/mkl_fft_1699240945874/work
+mkl-random @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/mkl_random_1699239515205/work
+mkl-service==2.4.0
+munkres==1.1.4
+numexpr @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/numexpr_1699258484110/work
+numpy @ file:///private/var/folders/c_/qfmhj66j0tn016nkx_th4hxm0000gp/T/abs_b7iptlxgej/croot/numpy_and_numpy_base_1708638622773/work/dist/numpy-1.26.4-cp312-cp312-macosx_10_9_x86_64.whl#sha256=94ff619271f410d5b23b2f118daf4420d22b48b21c941819693d61b19667808d
+packaging @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/packaging_1699238434731/work
+pandas @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_80pc5xjc2v/croot/pandas_1702317994691/work/dist/pandas-2.1.4-cp312-cp312-macosx_10_9_x86_64.whl#sha256=3eb67228f50b9e8d5582980f2be6c270d3bf7a66c1f08a7514dc2daaa6de26d6
+pillow @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_f8zh99mhe_/croot/pillow_1707233029679/work
+protobuf==4.25.3
+pyarrow==15.0.0
+pydeck==0.8.1b0
+Pygments==2.17.2
+pyparsing @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/pyparsing_1699242788721/work
+pyproj @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_061ew8s4jv/croot/pyproj_1704904385178/work
+python-dateutil @ file:///tmp/build/80754af9/python-dateutil_1626374649649/work
+pytz @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/pytz_1699244189577/work
+referencing==0.33.0
+requests==2.31.0
+rich==13.7.1
+rpds-py==0.18.0
+Rtree @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/rtree_1699288775164/work
+setuptools==68.2.2
+shapely==2.0.3
+six @ file:///tmp/build/80754af9/six_1644875935023/work
+smmap==5.0.1
+streamlit==1.31.1
+tenacity==8.2.3
+toml==0.10.2
+toolz==0.12.1
+tornado @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/tornado_1699250848162/work
+typing_extensions==4.10.0
+tzdata @ file:///croot/python-tzdata_1690578112552/work
+tzlocal==5.2
+urllib3==2.2.1
+validators==0.22.0
+wheel==0.41.2
+zipp==3.17.0
