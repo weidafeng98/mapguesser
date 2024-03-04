@@ -2,7 +2,7 @@ import streamlit as st
 import geopandas as gpd
 import matplotlib.pyplot as plt
 import random
-import time
+import os
 
 MAX_QUESTIONS = 10  # 设置最大题目数
 
@@ -60,20 +60,35 @@ if 'initialized' not in st.session_state:
     initialize_state()
     st.session_state['initialized'] = True
 
-st.title('Map Guesser V0.1')
+st.title('Map Guesser V0.2')
 
 # 在标题下方显示当前题目数和总题目数
 st.header(f"Finished Question {st.session_state['question_count']} of {MAX_QUESTIONS}")
 
 # Plot the country map
 def plot_country_map():
-    shp_file_path = 'ne_10m_admin_0_map_units.shp'
-    gdf = gpd.read_file(shp_file_path)
-    country_gdf = gdf[gdf['NAME'].eq(st.session_state['correct_country_name'])]
-    fig, ax = plt.subplots(figsize=(3, 1.5))
-    country_gdf.plot(ax=ax, color='lightgrey', edgecolor='black')
-    ax.axis('off')
-    st.pyplot(fig, use_container_width=False)
+    # 路径应指向你保存图片的文件夹
+    image_dir = 'svg'
+    image_path = os.path.join(image_dir, st.session_state['correct_country_name'] + '.svg')
+
+    # 如果图片已经存在，则显示图片
+    if os.path.isfile(image_path):
+        st.image(image_path)
+    else:
+        # 图片不存在，生成图片并保存
+        shp_file_path = 'ne_10m_admin_0_map_units.shp'
+        gdf = gpd.read_file(shp_file_path)
+        country_gdf = gdf[gdf['NAME'].eq(st.session_state['correct_country_name'])]
+        fig, ax = plt.subplots(figsize=(3, 1.5))
+        country_gdf.plot(ax=ax, color='lightgrey', edgecolor='black')
+        ax.axis('off')
+
+        # 保存生成的图片
+        fig.savefig(image_path, format='svg', bbox_inches='tight')
+        plt.close(fig)  # 关闭图形，避免内存泄露
+
+        # 然后显示刚保存的图片
+        st.image(image_path)
 
 if st.session_state['question_count'] < MAX_QUESTIONS:
     plot_country_map()
