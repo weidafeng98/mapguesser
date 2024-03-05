@@ -31,13 +31,16 @@ def initialize_state():
         st.session_state['score'] = 0
     if 'question_count' not in st.session_state:
         st.session_state['question_count'] = 0
+    if 'used_countries' not in st.session_state:
+        st.session_state['used_countries'] = set()  # 用于记录已用过的国家名称
 
     if st.session_state['question_count'] < MAX_QUESTIONS:
         # 加载国家名称映射
         name_mappings = load_country_name_mappings()
         
-        country_names = load_country_names()
+        country_names = [name for name in load_country_names() if name not in st.session_state['used_countries']]
         correct_country_name = random.choice(country_names)
+        st.session_state['used_countries'].add(correct_country_name)  # 添加当前正确的国家到已用过的国家集合中
         correct_country_chinese_name = name_mappings[correct_country_name]  # 获取中文名称
         incorrect_countries = random.sample([name for name in country_names if name != correct_country_name], 3)
         incorrect_countries_chinese = [name_mappings[name] for name in incorrect_countries]  # 转换为中文名称
@@ -76,7 +79,7 @@ if 'initialized' not in st.session_state:
     initialize_state()
     st.session_state['initialized'] = True
 
-st.title('Map Guesser V0.2')
+st.title('Map Guesser V0.3')
 
 # 在标题下方显示当前题目数和总题目数
 st.header(f"Finished Question {st.session_state['question_count']} of {MAX_QUESTIONS}")
